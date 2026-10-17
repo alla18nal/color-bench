@@ -1,0 +1,11 @@
+{"time": "2026-10-17T21:55:00.090", "tool": "measure_red", "ok": true, "channel": "red", "led": "red", "light": 767, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.5}
+{"time": "2026-10-17T21:56:23.485", "tool": "identify_bench", "ok": true, "port": "sim://?speed=1.0", "id": "ID COLOR_BENCH"}
+{"time": "2026-10-17T21:56:40.710", "tool": "measure_red", "ok": true, "channel": "red", "led": "red", "light": 765, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.5}
+{"time": "2026-10-17T21:57:26.102", "tool": "measure_dark", "ok": true, "channel": "dark", "led": "none", "light": 2, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.5}
+{"time": "2026-10-17T21:57:41.387", "tool": "measure_red", "ok": true, "channel": "red", "led": "red", "light": 762, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.5}
+{"time": "2026-10-17T21:57:56.275", "tool": "measure_green", "ok": true, "channel": "green", "led": "green", "light": 646, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.5}
+{"time": "2026-10-17T21:58:12.121", "tool": "measure_blue", "ok": true, "channel": "blue", "led": "blue", "light": 332, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.5}
+{"time": "2026-10-17T21:59:27.620", "tool": "measure_dark", "ok": true, "channel": "dark", "led": "none", "light": 6, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.52}
+{"time": "2026-10-17T21:59:42.713", "tool": "measure_red", "ok": true, "channel": "red", "led": "red", "light": 647, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.5}
+{"time": "2026-10-17T21:59:57.901", "tool": "measure_green", "ok": true, "channel": "green", "led": "green", "light": 80, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.5}
+{"time": "2026-10-17T22:00:13.071", "tool": "measure_blue", "ok": true, "channel": "blue", "led": "blue", "light": 30, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.5}

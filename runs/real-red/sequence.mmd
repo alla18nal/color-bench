@@ -1,0 +1,71 @@
+sequenceDiagram
+    title What color is the strip in the bench?
+    actor User as User
+    participant Orchestrator as Orchestrator
+    participant Scientist as Scientist
+    actor Human as Human
+    participant Executor as Executor (holds MCP tools)
+    participant MCP as MCP server
+    participant Arduino as Arduino Uno
+    User->>Orchestrator: request
+    Orchestrator->>Scientist: Initiate the measurement process to determine the color of the strip …
+    Scientist->>Human: Is the Arduino plugged in by USB, the firmware uploaded, the Serial M…
+    Human->>Scientist: yes
+    Scientist->>Executor: test - Take one red reading with the slot empty to test the hardware.
+    Executor->>MCP: measure_red()
+    MCP->>Arduino: 'R' over USB serial
+    Arduino-->>MCP: LIGHT 162
+    MCP-->>Executor: light=162
+    Executor->>Scientist: measurements written to dialogue
+    Scientist->>Human: Before I use the bench - is the Arduino plugged in by USB, the firmwa…
+    Human->>Scientist: yes
+    Scientist->>Executor: test - Connection test - identify the bench, then take one red readin…
+    Executor->>MCP: identify_bench()
+    MCP->>Arduino: 'I' over USB serial
+    Arduino-->>MCP: ID COLOR_BENCH
+    MCP-->>Executor: ID COLOR_BENCH
+    Executor->>MCP: measure_red()
+    MCP->>Arduino: 'R' over USB serial
+    Arduino-->>MCP: LIGHT 168
+    MCP-->>Executor: light=168
+    Executor->>Scientist: measurements written to dialogue
+    Scientist->>Executor: reference - Measure dark, then red, then green, then blue with the sl…
+    Executor->>MCP: measure_dark()
+    MCP->>Arduino: 'D' over USB serial
+    Arduino-->>MCP: LIGHT 0
+    MCP-->>Executor: light=0
+    Executor->>MCP: measure_red()
+    MCP->>Arduino: 'R' over USB serial
+    Arduino-->>MCP: LIGHT 165
+    MCP-->>Executor: light=165
+    Executor->>MCP: measure_green()
+    MCP->>Arduino: 'G' over USB serial
+    Arduino-->>MCP: LIGHT 7
+    MCP-->>Executor: light=7
+    Executor->>MCP: measure_blue()
+    MCP->>Arduino: 'B' over USB serial
+    Arduino-->>MCP: LIGHT 150
+    MCP-->>Executor: light=150
+    Executor->>Scientist: measurements written to dialogue
+    Scientist->>Human: Please insert the strip into the slot, CLOSE the bench completely so …
+    Human->>Scientist: yes
+    Scientist->>Executor: sample - Measure dark, then red, then green, then blue with the strip…
+    Executor->>MCP: measure_dark()
+    MCP->>Arduino: 'D' over USB serial
+    Arduino-->>MCP: LIGHT 0
+    MCP-->>Executor: light=0
+    Executor->>MCP: measure_red()
+    MCP->>Arduino: 'R' over USB serial
+    Arduino-->>MCP: LIGHT 18
+    MCP-->>Executor: light=18
+    Executor->>MCP: measure_green()
+    MCP->>Arduino: 'G' over USB serial
+    Arduino-->>MCP: LIGHT 0
+    MCP-->>Executor: light=0
+    Executor->>MCP: measure_blue()
+    MCP->>Arduino: 'B' over USB serial
+    Arduino-->>MCP: LIGHT 2
+    MCP-->>Executor: light=2
+    Executor->>Scientist: measurements written to dialogue
+    Scientist->>Orchestrator: report
+    Orchestrator->>User: Conclude the interaction as the scientist has successfully reported t…

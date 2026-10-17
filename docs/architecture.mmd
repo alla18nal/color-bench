@@ -1,0 +1,32 @@
+%% Architecture of the whole system after HW3. Render at https://mermaid.live
+flowchart LR
+    U([User]) -->|request| O
+
+    subgraph G["LangGraph (HW1 roles + HW2 human stop + HW3 hardware turn)"]
+        O[Orchestrator<br/>routes the request]
+        GE[General<br/>answers, no hardware]
+        S[Scientist<br/>protocol + analysis<br/>lab notebook]
+        E[Executor<br/>ONLY holder of the MCP tools<br/>LLM picks the tool]
+        H{{Human stop<br/>interrupt}}
+        O -->|route| S
+        O -->|route| GE
+        O -->|ambiguous| H
+        GE --> O
+        S -->|ask: hardware ok? / insert strip / re-run?| H
+        H -->|reply| S
+        H -->|reply| O
+        S -->|HARDWARE TURN: measure| E
+        E -->|readings in dialogue| S
+        S -->|report| O
+        O -->|finish| END([Answer])
+    end
+
+    E <-->|MCP over stdio| M
+
+    subgraph HW["Hardware side (HW3)"]
+        M[MCP server<br/>identify_bench, measure_dark,<br/>measure_red, measure_green, measure_blue]
+        C[Connector<br/>ColorBench, pyserial]
+        M --> C
+        C -->|USB serial 9600<br/>I D R G B| A[(Arduino Uno<br/>3 LEDs + light sensor)]
+        C -.->|BENCH_PORT=sim://| SIM[(Simulated bench<br/>HW2-style)]
+    end

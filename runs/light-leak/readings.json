@@ -1,0 +1,74 @@
+[
+  {
+    "run": 1,
+    "purpose": "test",
+    "channel": "red",
+    "light": 0
+  },
+  {
+    "run": 2,
+    "purpose": "test",
+    "channel": "red",
+    "light": 6
+  },
+  {
+    "run": 3,
+    "purpose": "test",
+    "channel": "red",
+    "light": 6
+  },
+  {
+    "run": 4,
+    "purpose": "reference",
+    "channel": "dark",
+    "light": 4
+  },
+  {
+    "run": 4,
+    "purpose": "reference",
+    "channel": "red",
+    "light": 6
+  },
+  {
+    "run": 4,
+    "purpose": "reference",
+    "channel": "green",
+    "light": 5
+  },
+  {
+    "run": 4,
+    "purpose": "reference",
+    "channel": "blue",
+    "light": 6
+  },
+  {
+    "run": 5,
+    "purpose": "test",
+    "channel": "red",
+    "light": 49
+  },
+  {
+    "run": 6,
+    "purpose": "reference",
+    "channel": "dark",
+    "light": 0
+  },
+  {
+    "run": 6,
+    "purpose": "reference",
+    "channel": "red",
+    "light": 49
+  },
+  {
+    "run": 6,
+    "purpose": "reference",
+    "channel": "green",
+    "light": 0
+  },
+  {
+    "run": 6,
+    "purpose": "reference",
+    "channel": "blue",
+    "light": 49
+  }
+]

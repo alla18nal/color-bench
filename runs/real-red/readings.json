@@ -1,0 +1,62 @@
+[
+  {
+    "run": 1,
+    "purpose": "test",
+    "channel": "red",
+    "light": 162
+  },
+  {
+    "run": 2,
+    "purpose": "test",
+    "channel": "red",
+    "light": 168
+  },
+  {
+    "run": 3,
+    "purpose": "reference",
+    "channel": "dark",
+    "light": 0
+  },
+  {
+    "run": 3,
+    "purpose": "reference",
+    "channel": "red",
+    "light": 165
+  },
+  {
+    "run": 3,
+    "purpose": "reference",
+    "channel": "green",
+    "light": 7
+  },
+  {
+    "run": 3,
+    "purpose": "reference",
+    "channel": "blue",
+    "light": 150
+  },
+  {
+    "run": 4,
+    "purpose": "sample",
+    "channel": "dark",
+    "light": 0
+  },
+  {
+    "run": 4,
+    "purpose": "sample",
+    "channel": "red",
+    "light": 18
+  },
+  {
+    "run": 4,
+    "purpose": "sample",
+    "channel": "green",
+    "light": 0
+  },
+  {
+    "run": 4,
+    "purpose": "sample",
+    "channel": "blue",
+    "light": 2
+  }
+]

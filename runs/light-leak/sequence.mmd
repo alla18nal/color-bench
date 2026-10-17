@@ -1,0 +1,91 @@
+sequenceDiagram
+    title What color is the strip in the bench?
+    actor User as User
+    participant Orchestrator as Orchestrator
+    participant Scientist as Scientist
+    actor Human as Human
+    participant Executor as Executor (holds MCP tools)
+    participant MCP as MCP server
+    participant Arduino as Arduino Uno
+    User->>Orchestrator: request
+    Orchestrator->>Scientist: Initiate the measurement process to determine the color of the strip …
+    Scientist->>Human: Is the Arduino plugged in by USB, the firmware uploaded, the Serial M…
+    Human->>Scientist: y
+    Scientist->>Executor: test - Take one red test reading with the empty slot.
+    Executor->>MCP: measure_red()
+    MCP->>Arduino: 'R' over USB serial
+    Arduino-->>MCP: LIGHT 0
+    MCP-->>Executor: light=0
+    Executor->>Scientist: measurements written to dialogue
+    Scientist->>Human: The test measurement failed because the red reading was 0, indicating…
+    Human->>Scientist: yes
+    Scientist->>Executor: test - Take one red test reading with the empty slot.
+    Executor->>MCP: measure_red()
+    MCP->>Arduino: 'R' over USB serial
+    Arduino-->>MCP: LIGHT 6
+    MCP-->>Executor: light=6
+    Executor->>Scientist: measurements written to dialogue
+    Scientist->>Human: Before I use the bench - is the Arduino plugged in by USB, the firmwa…
+    Human->>Scientist: yes
+    Scientist->>Executor: test - Connection test - identify the bench, then take one red readin…
+    Executor->>MCP: identify_bench()
+    MCP->>Arduino: 'I' over USB serial
+    Arduino-->>MCP: ID COLOR_BENCH
+    MCP-->>Executor: ID COLOR_BENCH
+    Executor->>MCP: measure_red()
+    MCP->>Arduino: 'R' over USB serial
+    Arduino-->>MCP: LIGHT 6
+    MCP-->>Executor: light=6
+    Executor->>Scientist: measurements written to dialogue
+    Scientist->>Executor: reference - Measure dark, then red, then green, then blue with the sl…
+    Executor->>MCP: measure_dark()
+    MCP->>Arduino: 'D' over USB serial
+    Arduino-->>MCP: LIGHT 4
+    MCP-->>Executor: light=4
+    Executor->>MCP: measure_red()
+    MCP->>Arduino: 'R' over USB serial
+    Arduino-->>MCP: LIGHT 6
+    MCP-->>Executor: light=6
+    Executor->>MCP: measure_green()
+    MCP->>Arduino: 'G' over USB serial
+    Arduino-->>MCP: LIGHT 5
+    MCP-->>Executor: light=5
+    Executor->>MCP: measure_blue()
+    MCP->>Arduino: 'B' over USB serial
+    Arduino-->>MCP: LIGHT 6
+    MCP-->>Executor: light=6
+    Executor->>Scientist: measurements written to dialogue
+    Scientist->>Human: The reference measurements failed because the dark reading is too hig…
+    Human->>Scientist: yes
+    Scientist->>Executor: test - Identify the bench and take one red test reading.
+    Executor->>MCP: identify_bench()
+    MCP->>Arduino: 'I' over USB serial
+    Arduino-->>MCP: ID COLOR_BENCH
+    MCP-->>Executor: ID COLOR_BENCH
+    Executor->>MCP: measure_red()
+    MCP->>Arduino: 'R' over USB serial
+    Arduino-->>MCP: LIGHT 49
+    MCP-->>Executor: light=49
+    Executor->>Scientist: measurements written to dialogue
+    Scientist->>Executor: reference - Measure dark, then red, then green, then blue with the sl…
+    Executor->>MCP: measure_dark()
+    MCP->>Arduino: 'D' over USB serial
+    Arduino-->>MCP: LIGHT 0
+    MCP-->>Executor: light=0
+    Executor->>MCP: measure_red()
+    MCP->>Arduino: 'R' over USB serial
+    Arduino-->>MCP: LIGHT 49
+    MCP-->>Executor: light=49
+    Executor->>MCP: measure_green()
+    MCP->>Arduino: 'G' over USB serial
+    Arduino-->>MCP: LIGHT 0
+    MCP-->>Executor: light=0
+    Executor->>MCP: measure_blue()
+    MCP->>Arduino: 'B' over USB serial
+    Arduino-->>MCP: LIGHT 49
+    MCP-->>Executor: light=49
+    Executor->>Scientist: measurements written to dialogue
+    Scientist->>Human: The reference measurement failed because the green LED signal added 0…
+    Human->>Scientist: stop the experiment and finish
+    Scientist->>Orchestrator: report
+    Orchestrator->>User: Conclude the session as the user requested to stop the experiment.

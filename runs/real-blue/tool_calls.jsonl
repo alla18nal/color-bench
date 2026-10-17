@@ -1,0 +1,11 @@
+{"time": "2026-10-17T22:27:35.290", "tool": "measure_red", "ok": true, "channel": "red", "led": "red", "light": 73, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.53}
+{"time": "2026-10-17T22:28:41.852", "tool": "identify_bench", "ok": true, "port": "COM4", "id": "ID COLOR_BENCH"}
+{"time": "2026-10-17T22:28:43.379", "tool": "measure_red", "ok": true, "channel": "red", "led": "red", "light": 77, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.53}
+{"time": "2026-10-17T22:29:26.460", "tool": "measure_dark", "ok": true, "channel": "dark", "led": "none", "light": 0, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.53}
+{"time": "2026-10-17T22:29:27.987", "tool": "measure_red", "ok": true, "channel": "red", "led": "red", "light": 81, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.52}
+{"time": "2026-10-17T22:29:29.516", "tool": "measure_green", "ok": true, "channel": "green", "led": "green", "light": 2, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.52}
+{"time": "2026-10-17T22:29:31.043", "tool": "measure_blue", "ok": true, "channel": "blue", "led": "blue", "light": 97, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.52}
+{"time": "2026-10-17T22:31:01.943", "tool": "measure_dark", "ok": true, "channel": "dark", "led": "none", "light": 0, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.53}
+{"time": "2026-10-17T22:31:16.541", "tool": "measure_red", "ok": true, "channel": "red", "led": "red", "light": 6, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.52}
+{"time": "2026-10-17T22:31:31.572", "tool": "measure_green", "ok": true, "channel": "green", "led": "green", "light": 0, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.52}
+{"time": "2026-10-17T22:31:46.822", "tool": "measure_blue", "ok": true, "channel": "blue", "led": "blue", "light": 22, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.53}

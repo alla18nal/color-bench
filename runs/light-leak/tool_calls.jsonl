@@ -1,0 +1,14 @@
+{"time": "2026-10-17T22:34:07.609", "tool": "measure_red", "ok": true, "channel": "red", "led": "red", "light": 0, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.52}
+{"time": "2026-10-17T22:35:16.510", "tool": "measure_red", "ok": true, "channel": "red", "led": "red", "light": 6, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.53}
+{"time": "2026-10-17T22:36:16.113", "tool": "identify_bench", "ok": true, "port": "COM4", "id": "ID COLOR_BENCH"}
+{"time": "2026-10-17T22:36:17.641", "tool": "measure_red", "ok": true, "channel": "red", "led": "red", "light": 6, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.52}
+{"time": "2026-10-17T22:37:03.498", "tool": "measure_dark", "ok": true, "channel": "dark", "led": "none", "light": 4, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.52}
+{"time": "2026-10-17T22:37:18.812", "tool": "measure_red", "ok": true, "channel": "red", "led": "red", "light": 6, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.52}
+{"time": "2026-10-17T22:37:33.926", "tool": "measure_green", "ok": true, "channel": "green", "led": "green", "light": 5, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.53}
+{"time": "2026-10-17T22:37:49.167", "tool": "measure_blue", "ok": true, "channel": "blue", "led": "blue", "light": 6, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.52}
+{"time": "2026-10-17T22:39:27.939", "tool": "identify_bench", "ok": true, "port": "COM4", "id": "ID COLOR_BENCH"}
+{"time": "2026-10-17T22:39:44.634", "tool": "measure_red", "ok": true, "channel": "red", "led": "red", "light": 49, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.52}
+{"time": "2026-10-17T22:40:30.107", "tool": "measure_dark", "ok": true, "channel": "dark", "led": "none", "light": 0, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.52}
+{"time": "2026-10-17T22:40:45.404", "tool": "measure_red", "ok": true, "channel": "red", "led": "red", "light": 49, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.51}
+{"time": "2026-10-17T22:41:00.637", "tool": "measure_green", "ok": true, "channel": "green", "led": "green", "light": 0, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.52}
+{"time": "2026-10-17T22:41:16.022", "tool": "measure_blue", "ok": true, "channel": "blue", "led": "blue", "light": 49, "scale": "raw ADC 0-1023 (higher = more light on the sensor)", "duration_s": 1.53}
